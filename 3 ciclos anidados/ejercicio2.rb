@@ -1,5 +1,5 @@
 =begin
-Generar el código para imprimir la siguiente tabla:
+Generar el codigo para imprimir la siguiente tabla:
 
  <table>
  <tbody>
@@ -24,3 +24,24 @@ Generar el código para imprimir la siguiente tabla:
   <tbody>
  </table>
 =end
+
+html = "<table>\n<tbody>\n    <tr>\n"
+4.times do |i|
+    i+=1
+    html << "      <td> #{i} </td>\n"
+end
+html << "    </tr>\n"
+
+4.times do |i|
+
+    i+=1
+    html << "      <td> #{i+4} </td>\n"
+end
+html << "    </tr>\n"
+4.times do |i|
+    i+=1
+    html << "      <td> #{i+8} </td>\n"
+end
+html << "    </tr>\n"
+"</tbody>\n</table>"
+puts html
